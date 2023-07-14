@@ -18,8 +18,8 @@ def stemming(content):
 
 
 def fake_news_detection(news):
-    model = pickle.load(open("C:/Users/pc cam/Desktop/Fake-News-Detection-software/models/fake_news_logistic_regression_model.sav", 'rb'))
-    vectorizer = pickle.load(open("C:/Users/pc cam/Desktop/Fake-News-Detection-software/models/fake_news_logistic_regression_tfidf_vectorizer.sav", 'rb'))
+    model = pickle.load(open("models/fake_news_logistic_regression_model.sav", 'rb'))
+    vectorizer = pickle.load(open("models/fake_news_logistic_regression_tfidf_vectorizer.sav", 'rb'))
 
     prediction = model.predict(
         vectorizer.transform([stemming("Hillary Clinton is part of children traficking organization")])
