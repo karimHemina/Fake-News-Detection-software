@@ -22,7 +22,7 @@ def fake_news_detection(news):
     vectorizer = pickle.load(open("models/fake_news_logistic_regression_tfidf_vectorizer.sav", 'rb'))
 
     prediction = model.predict(
-        vectorizer.transform([stemming("Hillary Clinton is part of children traficking organization")])
+        vectorizer.transform([stemming(news)])
     )
 
     if (prediction[0] == 0):
